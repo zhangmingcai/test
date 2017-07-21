@@ -1,0 +1,127 @@
+.border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* 标签初始化 */
+* {
+  margin: 0;
+  padding: 0;
+}
+b {
+  font-weight: normal;
+}
+html {
+  min-height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  min-height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "微软雅黑";
+}
+img,
+input,
+select {
+  vertical-align: middle;
+}
+input::-ms-clear {
+  display: none;
+}
+img {
+  border: 0;
+}
+input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ddd;
+}
+input::-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ddd;
+}
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ddd;
+}
+input::-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ddd;
+}
+textarea::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ddd;
+}
+textarea::-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ddd;
+}
+textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ddd;
+}
+textarea::-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ddd;
+}
+li {
+  list-style-type: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th,
+td {
+  padding: 0;
+}
+input,
+button,
+select,
+textarea {
+  outline: none;
+  resize: none;
+}
+a {
+  outline: medium none;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+}
+/* 浮动 、清除 其它 */
+.left {
+  float: left !important;
+  display: inline;
+}
+.right {
+  float: right !important;
+  display: inline;
+}
+.clearf {
+  clear: both;
+  line-height: 0;
+  height: 0%;
+  font: 0px Arial;
+  overflow: hidden;
+}
+.none {
+  display: none;
+}
+/*
+ *  弹窗遮罩
+ */
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.2);
+}
+.bg-grey {
+  background-color: #f8f8f8;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="../public/css/main.css">
+</head>
+<body>
+	<div class="box">
+		<div class="header">
+			<div class="header-head">
+				<div class="header-head-logo">
+					<img src="../public/images/logo.png" alt="logo">
+					<span>中国-生态城
+					<!-- 天津生态城 --></span>
+				</div>
+				<div class="header-head-menu">
+					<ul>
+						<li><a href="#">首页</a></li>
+						<li><a href="#">景点</a></li>
+						<li><a href="#">活动</a></li>
+						<li><a href="#">酒店</a></li>
+						<li><a href="#">美食</a></li>
+						<li><a href="#">购物</a></li>
+						<li><a href="#">地图</a></li>
+						<li><a href="#">论坛</a></li>
+						<li><a href="#">文化单位</a></li>
+						<li><a href="#">走进生态城</a></li>
+					</ul>
+				</div>
+				<div class="header-head-search">
+					<input type="" name="" placeholder="请输入搜索内容">
+					<img src="../public/images/搜索_搜索.png" alt="搜索_搜索.png">
+				</div>
+			</div>
+
+			<div class="header-foot">
+				<p>Sino-Singapore Tianjin Eco-city</p>
+				<div>
+					<div><hr><hr><hr></div>
+					
+					<img src="../public/images/logo.png" alt="logo" alt="">
+					<div><hr><hr><hr></div>
+				</div>
+				<p>感知世界的温度</p> 
+			</div>
+		</div>
+		<div class="body">
+			<table>
+				<tr>
+					<th class="theme">资讯主题</th>
+					<th class="time">发布时间</th>
+				</tr>
+				<tr>
+					<td><a>国家海洋博物馆仿古船将于年内完成</a></td>
+					<td>2017-06-21  18:00</td>
+				</tr>
+				<tr>
+					<td>
+						<a>
+							天津医科大学中新生态城医院医疗设备采购调研通知（第二十一期）
+						</a>
+					</td>
+					<td>2017-06-21  18:00</td>
+				</tr>
+				<tr>
+					<td><a>东堤公园预计今年年底开放</a></td>
+					<td>2017-06-21  18:00</td>
+				</tr>
+				<tr>
+					<td><a>生态城2017年建设计划确定 第四社区中心设计方案近期完成</a></td>
+					<td>2017-06-21  18:00</td>
+				</tr>
+				<tr>
+					<td>
+						<a>
+							关于中新天津生态城天津医科大学生态城代谢病医院环境保护竣工验收受理信息公示
+						</a>
+					</td>
+					<td>2017-06-21  18:00</td>
+				</tr>
+				<tr>
+					<td><a>关于举办生态城人才引进落户工作培训会的通知</a></td>
+					<td>2017-06-21  18:00</td>
+				</tr>
+				<tr>
+					<td>
+						<a>
+							天津市商务委关于做好2017-2018年度国家电子商务示范企业创建工作的通知
+						</a>
+					</td>
+					<td>2017-06-21  18:00</td>
+				</tr>
+				<tr>
+					<td><a>关于征集市应急产业联盟筹备组企业成员单位的通知</a></td>
+					<td>2017-06-21  18:00</td>
+				</tr>
+				<tr>
+					<td>
+						<a>
+							天津医科大学中新生态城医院医用耗材院内采购谈判通知-第4期
+						</a>
+					</td>
+					<td>2017-06-21  18:00</td>
+				</tr>
+				<tr>
+					<td><a>关于征集市应急产业联盟筹备组企业成员单位的通知</a></td>
+					<td>2017-06-21  18:00</td>
+				</tr>
+			</table>
+			<div>
+				<ul  class="pagination">
+					<li class="pagenum">共200页／3000条</li>
+				  <li><a class="active" href="#">1</a></li>
+				  <li><a href="#">2</a></li>
+				  <li><a href="#">3</a></li>
+				  <li><a href="#">4</a></li>
+				  <li><a href="#">5</a></li>
+				  <li><a href="#" class="three">...</a></li>
+				  <li><a href="#" class="three">198</a></li>
+				  <li><a href="#" class="three">199</a></li>
+				  <li><a href="#" class="three">200</a></li>
+				  <li><a class="next" href="#">下一页>></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<button id="alert-btn" onclick="showModal()">点击出现遮罩层</button>
+		</div>
+	</div>
+	<div id="mask">
+		<div class="alertModal">
+			<ul>
+				<li class="title">报 名</li>
+				<li class="name">姓名</li>
+				<li class="name-input">
+					<input type="text" placeholder="请输入您的姓名">
+				</li>
+				<li class="phone">电话</li>
+				<li class="phone-input">
+					<input type="text" placeholder="请输入联系电话">
+				</li>
+				<li class="number">人数</li>
+				<li class="number-select">
+					<span class="minus-number">-</span>
+					<span class="how-number">3</span>
+					<span class="add-number">+</span>
+					<span class="unit-number">人</span>
+				</li>
+				<li class="submit">
+					<button>提交</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="../public/jquery/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#mask").hide();
+			$("#mask").on("click",function(){
+				$("#mask").hide();
+				$("#mask").removeClass("mask");
+				$("body").removeClass("Kill-scroll");
+			});
+			$('#mask>*').click(function(event){
+			  event.stopPropagation();
+			});
+		})
+		function showModal(){
+			$("#mask").show();
+			$("#mask").removeClass("mask");
+			$("#mask").addClass("mask");
+			$("body").addClass("Kill-scroll");
+		}
+	</script>
+</body>
+
+</html>
