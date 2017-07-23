@@ -125,19 +125,23 @@ a:hover {
 .bg-grey {
   background-color: #f8f8f8;
 }
+@media screen and (max-width: 1170px) {
+  .header-foot {
+    display: none;
+  }
+}
 /* 整体布局 */
-.box {
-  width: 100%;
-  margin: 0 auto;
-}
-.box .header {
+body {
   width: 100%;
 }
-.box .body {
+body .header {
+  width: 100%;
+}
+body .content {
   width: 80%;
   margin: 0 auto;
 }
-.box .footer {
+body .footer {
   width: 100%;
   height: 360px;
   background-color: #1A273E;
@@ -146,7 +150,9 @@ a:hover {
 .header {
   height: 540px;
   border: 1px #ffffff solid;
-  background: url('../images/Group4.png');
+}
+.header img:first-child {
+  width: 100%;
 }
 .header .header-head {
   width: 100%;
@@ -159,8 +165,9 @@ a:hover {
   background: rgba(40, 75, 0, 0.3);
 }
 .header .header-head .header-head-logo {
-  position: absolute;
-  left: 1.5%;
+  /* border: 1px red solid; */
+  float: left;
+  margin-left: 1.5%;
   width: 12%;
   font-size: 10px;
 }
@@ -169,33 +176,32 @@ a:hover {
   height: 38px;
 }
 .header .header-head .header-head-menu {
-  position: absolute;
-  left: 15%;
-  width: 65%;
+  /* border: 1px red solid; */
+  height: 40px;
+  padding-top: 20px;
+  float: left;
+  margin-left: 3%;
+  width: 60%;
 }
 .header .header-head .header-head-menu ul li {
-  display: inline-block;
+  float: left;
   line-height: 20px;
   height: 22px;
-  padding-left: 1.8%;
-  padding-right: 1.8%;
-}
-.header .header-head .header-head-menu ul li:hover {
-  background-color: #8FBC8F;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 .header .header-head .header-head-menu ul li a {
   color: #ffffff;
   font-size: 16px;
-  word-spacing: 20px;
 }
 .header .header-head .header-head-search {
-  position: absolute;
-  right: 1.5%;
-  widows: 18%;
+  /* border: 1px red solid; */
+  float: right;
+  margin-right: 1.5%;
+  width: 15%;
 }
 .header .header-head .header-head-search input {
   border: 0 solid red;
-  display: inline-block;
   width: 100%;
   height: 40px;
   line-height: 17px;
@@ -203,17 +209,18 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 100px;
   font-size: 14px;
-  background-image: url('../images/搜索框.png');
-  background-size: 100% 40px;
 }
 .header .header-head .header-head-search img {
-  position: absolute;
-  right: 10px;
-  top: 25px;
+  float: right;
+  margin-right: 1.5%;
+  margin-top: -35px;
 }
 .header .header-foot {
+  /* border: 1px red solid; */
+  /* float: left;加了浮动就不行了 */
   width: 50%;
-  margin: 140px auto;
+  margin-left: 25%;
+  margin-top: -380px;
   text-align: center;
   color: #ffffff;
 }
@@ -247,46 +254,71 @@ a:hover {
   width: 210px;
 }
 /* 内容 */
-.body table th {
+.content {
+  /* border: blue solid 1px; */
+}
+.content ul {
+  float: left;
+  width: 100%;
+  /* border: red solid 1px; */
+}
+.content ul .theme,
+.content ul .time {
+  /* border: 1px red solid; */
   font-size: 22px;
   color: #666666;
   padding-top: 38px;
   padding-bottom: 20px;
   border-bottom: 2px solid #D8D8D8;
 }
-.body table .time {
+.content ul .time {
+  text-align: center;
+  display: inline-block;
   width: 30%;
+  float: right;
   min-width: 22px;
 }
-.body table .theme {
-  width: 70%;
+.content ul .theme {
+  text-align: center;
+  display: inline-block;
+  width: 28%;
+  float: left;
   padding-right: 40%;
   min-width: 22px;
 }
-.body table tr > td {
+.content ul a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 70%;
+  float: left;
   color: #666666;
   line-height: 70px;
   border-bottom: 1px dotted #D8D8D8;
   font-size: 20px;
 }
-.body table tr td:last-child {
+.content ul span {
+  display: inline-block;
+  width: 30%;
+  float: right;
   color: #666666;
   line-height: 70px;
   border-bottom: 1px dotted #D8D8D8;
   text-align: center;
   font-size: 18px;
 }
-.body div {
+.content div.page {
   width: 60%;
   margin: 100px auto 315px;
 }
-.body div .pagination {
+.content div.page .pagination {
   display: inline-block;
   width: 100%;
   padding: 0;
   margin: 0;
 }
-.body div .pagination a {
+.content div.page .pagination a {
   display: inline-block;
   width: 21px;
   height: 24px;
@@ -300,26 +332,26 @@ a:hover {
   padding: 0;
   transition: background-color 0.3s;
 }
-.body div .pagination a:hover:not(.active) {
+.content div.page .pagination a:hover:not(.active) {
   background-color: #ddd;
 }
-.body div .pagination .active {
+.content div.page .pagination .active {
   background-color: #90CB36;
   color: white;
   line-height: 23px;
 }
-.body div .pagination .next {
+.content div.page .pagination .next {
   width: 64px;
   height: 24px;
   line-height: 23px;
   background-color: #90CB36;
   color: white;
 }
-.body div .pagination .three {
+.content div.page .pagination .three {
   width: 26px;
   height: 21px;
 }
-.body div .pagination .pagenum {
+.content div.page .pagination .pagenum {
   float: left;
   font-size: 14px;
   width: 115px;
@@ -377,7 +409,8 @@ a:hover {
   width: 478px;
   height: 38px;
   line-height: 0px;
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-bottom: 20px;
   border: 1px solid #E1E1E1;
   border-radius: 75px;
@@ -397,7 +430,8 @@ a:hover {
   width: 478px;
   height: 38px;
   line-height: 0px;
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-bottom: 20px;
   border: 1px solid #E1E1E1;
   border-radius: 75px;
